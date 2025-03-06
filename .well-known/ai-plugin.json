@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "User Email Registration API",
+  "name_for_model": "user_email_registration",
+  "description_for_human": "スプレッドシートでメール登録と認証を行うAPI。",
+  "description_for_model": "Googleスプレッドシートをバックエンドに、ユーザーのメール登録と認証を行うAPI。",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://<yourusername>.github.io/<your-repository>/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://<yourusername>.github.io/<your-repository>/logo.png",
+  "contact_email": "support@yourdomain.com",
+  "legal_info_url": "https://yourdomain.com/legal"
+}
