@@ -1,0 +1,48 @@
+openapi: "3.0.0"
+info:
+  title: "User Email Registration API"
+  description: "縺薙�API縺ｯ縲√せ繝励Ξ繝�ラ繧ｷ繝ｼ繝亥�縺ｮ繝｡繝ｼ繝ｫ繧偵メ繧ｧ繝�け縺励∫匳骭ｲ縺輔ｌ縺ｦ縺�↑縺代ｌ縺ｰ逋ｻ骭ｲ縺吶ｋ縺溘ａ縺ｮ繧ゅ�縺ｧ縺吶�"
+  version: "1.0.0"
+servers:
+  - url: "https://script.google.com"
+paths:
+  /macros/s/XXXXXXXXXXXXXXXXX/exec:
+    post:
+      summary: "繝ｦ繝ｼ繧ｶ繝ｼ逋ｻ骭ｲ縺ｾ縺溘�隱崎ｨｼ"
+      description: "譁ｰ隕冗匳骭ｲ縺ｾ縺溘�隱崎ｨｼ繧定｡後＞縺ｾ縺吶�"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  description: "繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ繝｡繝ｼ繝ｫ繧｢繝峨Ξ繧ｹ"
+                password:
+                  type: string
+                  description: "隱崎ｨｼ逕ｨ縺ｮ繝代せ繝ｯ繝ｼ繝会ｼ域眠隕冗匳骭ｲ譎ゅ�逵∫払蜿ｯ閭ｽ��"
+              required:
+                - email
+      responses:
+        "200":
+          description: "逋ｻ骭ｲ縺ｾ縺溘�隱崎ｨｼ縺梧�蜉溘＠縺溷�ｴ蜷�"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - ok
+                      - denied
+                      - error
+                  message:
+                    type: string
+        "400":
+          description: "荳肴ｭ｣縺ｪ繝ｪ繧ｯ繧ｨ繧ｹ繝�"
+        "500":
+          description: "繧ｵ繝ｼ繝仙�驛ｨ繧ｨ繝ｩ繝ｼ"
