@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://<yourusername>.github.io/<your-repository>/openapi.yaml",
+    "url": "https://shimeitakamura.github.io/gpts/openapi.yaml",
     "is_user_authenticated": false
   },
   "logo_url": "https://<yourusername>.github.io/<your-repository>/logo.png",
